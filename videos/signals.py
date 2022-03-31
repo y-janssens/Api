@@ -8,7 +8,7 @@ from django.dispatch import receiver
 from django.core.mail import send_mail
 from django.conf import settings
 
-def deleteVideo(sender, instance, **kwargs):
+""" def deleteVideo(sender, instance, **kwargs):
     video = instance
     file = video.file
     thumbnail = video.thumbnail
@@ -19,4 +19,4 @@ def deleteVideo(sender, instance, **kwargs):
     except:
         pass
 
-post_delete.connect(deleteVideo, sender=Video)
+post_delete.connect(deleteVideo, sender=Video) """
