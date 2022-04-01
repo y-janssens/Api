@@ -48,7 +48,7 @@ def getVideo(request, pk):
         return Response(serializer.data)
 
 
-@api_view(['POST'])
+@api_view(['POST', 'PUT'])
 @parser_classes([FormParser, MultiPartParser])
 def addVideo(request):
 
