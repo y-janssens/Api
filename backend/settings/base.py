@@ -155,9 +155,9 @@ USE_I18N = True
 
 USE_TZ = True
 
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOWED_ORIGINS = [
+""" CORS_ALLOWED_ORIGINS = [
 "http://localhost:3000",
 "http://127.0.0.1:8000",
 "https://y-jns-api.herokuapp.com",
@@ -169,7 +169,7 @@ CSRF_TRUSTED_ORIGINS = [
 "http://127.0.0.1:8000",
 "https://y-jns-api.herokuapp.com",
 "https://streaming-app-frontend.herokuapp.com"
-]
+] """
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
