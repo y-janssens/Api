@@ -12,6 +12,7 @@ class Video(models.Model):
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     thumbnail = models.FileField(blank=False, null=False)
     file = models.FileField(upload_to=('videos'), blank=False, null=False)
+    fileName = models.CharField(max_length=150, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
     def __str__(self):
