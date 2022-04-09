@@ -49,7 +49,7 @@ def getVideo(request, pk):
 
 
 @api_view(['POST', 'PUT'])
-@parser_classes([FormParser, MultiPartParser])
+#@parser_classes([FormParser, MultiPartParser])
 def addVideo(request):
 
     try:
@@ -57,11 +57,11 @@ def addVideo(request):
     except:
         category = Category.objects.create(name=request.data['category'])
 
-    file = request.data['file']
+    #file = request.data['file']
     serializer = VideosSerializer(data=request.data)
     print(request.data)
     if serializer.is_valid(raise_exception=True):
-        serializer.save(category=category, file=file)
+        serializer.save(category=category)
     return Response(serializer.data)
 
 
