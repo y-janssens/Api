@@ -34,16 +34,12 @@ def getVideos(request):
 @api_view(['GET', 'DELETE'])
 def getVideo(request, pk):
     video = Video.objects.get(id=pk)
-    file = video.file
-    thumbnail = video.thumbnail
     serializer = VideosSerializer(video, many=False)
 
     if request.method == "GET":
         return Response(serializer.data)
 
     elif request.method == "DELETE":
-        file.delete()
-        thumbnail.delete()
         video.delete()
         return Response(serializer.data)
 
